@@ -1,0 +1,94 @@
+.login-card {
+    border: none;
+    border-radius: 0px;
+
+    .login-title {
+        font-size: 25px;
+        color: #424242;
+        margin-bottom: 30px;
+    }
+
+    &.login-card-title {
+        background-color: #1b2a49;
+        color: white;
+        font-size: 30px;
+        padding: 10px !important;
+    }
+
+    .fb-btn {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        font-size: 18px;
+        color: white;
+        border: none;
+        background: #f5cb52;
+        margin-top: 30px;
+    }
+}
+
+header {
+    background-color: #334d88 !important;
+
+    a {
+        color: white !important;
+    }
+    
+    .user-name {
+        margin-right: 20px;
+    }
+    
+    .logo-name {
+        color: white;
+        font-size: 26px;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+}
+
+.app-body {
+    .sidebar {
+        background: #1b2a49;
+
+        ul {
+            list-style: none;
+            padding: 10px;
+            background: #90b1d0;
+            color: #1b2a49;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+
+    .main {
+        .proposal-title {
+            padding: 20px 40px;
+            font-size: 25px;
+        }
+
+        .proposal-wrapper {
+            padding: 0 40px;
+
+            .card-footer {
+                border-top: none;
+                background: transparent;
+                text-align: center;
+
+                .submit-btn {
+                    background: #f5cb52;
+                    border: none;
+                    font-size: 18px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        }
+
+        .action-btn {
+            width: 40%;
+            margin-right: 10px;
+            float: left;
+            margin-top: 0;
+        }
+    }
+}
