@@ -1,18 +1,19 @@
-var express = require('express');
-var bodyParser = require('body-parser')
-var cors = require("cors");
+const express = require('express');
+const bodyParser = require('body-parser')
+const cors = require("cors");
+const morgan = require("morgan");
 
-var restAPIRouter = require("./routes/restAPI");
+const proposalRouter = require("./routes/proposal");
 
-var app = express();
-
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({
-  extended: true
-}))
+const app = express();
 
 app.use(cors());
+app.use(bodyParser.json());
+app.use(morgan());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
-app.use("/restAPI", restAPIRouter);
+app.use("/api/proposal", proposalRouter);
 
 module.exports = app;

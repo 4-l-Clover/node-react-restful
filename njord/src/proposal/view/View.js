@@ -4,7 +4,7 @@ import { Badge, Card, CardBody, Col, Row, Table, Button } from 'reactstrap';
 class View extends Component {
     constructor(props) {
         super(props);
-        this.serverUrl = "http://localhost:9000/restAPI/";
+        this.serverUrl = "http://localhost:9000/api/proposal";
 
         this.state = {proposalList: []};
         this.getProposals();
@@ -12,7 +12,7 @@ class View extends Component {
 
     // Get Proposals from the server by Logged-In Company
     getProposals() {
-        fetch(this.serverUrl + "getData?company_id=" + localStorage.getItem("role"), {
+        fetch(this.serverUrl + "?company_id=" + localStorage.getItem("role"), {
             method: 'GET',
         })
         .then(response => response.json())
@@ -25,8 +25,10 @@ class View extends Component {
     process = (id, kind) => {
         var that = this;
 
-        fetch(this.serverUrl + "updateStatus?id=" + id + "&status=" + kind, {
-            method: 'GET',
+        fetch(this.serverUrl + "/" + id, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({status: kind}),
         })
         .then(response => response.json())
         .then(data => {

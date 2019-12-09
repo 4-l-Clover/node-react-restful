@@ -1,9 +1,9 @@
-var mongoose = require('mongoose'),
+const mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 mongoose.connect('mongodb://localhost/testdb');
 
-var proposalSchema = new Schema({
+const proposalSchema = new Schema({
     description: String,
     status: Number, // 0: pending, 1: accepted, 2: rejected
     price: Number,

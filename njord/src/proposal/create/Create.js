@@ -19,7 +19,7 @@ class Create extends Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
 
-        this.serverUrl = "http://localhost:9000/restAPI/register";
+        this.serverUrl = "http://localhost:9000/api/proposal";
         this.username = localStorage.getItem('name');
         this.toggle = this.toggle.bind(this);
         this.toggleFade = this.toggleFade.bind(this);
